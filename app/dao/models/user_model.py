@@ -23,9 +23,8 @@ class User(db.Model):
 # Create schema for model
 class UserSchema(Schema):
     """Schema for User"""
-    id = fields.Int()
+    id = fields.Int(dump_only=True)
     email = fields.Str()
-    password = fields.Str()
     name = fields.Str()
     surname = fields.Str()
     favourite_genre = fields.Int()
